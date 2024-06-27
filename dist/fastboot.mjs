@@ -2800,7 +2800,7 @@ async function zipGetData(entry, writer, options = undefined) {
     }
 }
 
-async function flashEntryBlob(device, entry, onProgress, partition) {
+async function flashEntryBlob(device, entry, onProgress, partition, slot = "current") {
     logDebug(`Unpacking ${partition}`);
     onProgress("unpack", partition, 0.0);
     let blob = await zipGetData(
@@ -2815,17 +2815,17 @@ async function flashEntryBlob(device, entry, onProgress, partition) {
 
     logDebug(`Flashing ${partition}`);
     onProgress("flash", partition, 0.0);
-    await device.flashBlob(partition, blob, (progress) => {
-        onProgress("flash", partition, progress);
+    await device.flashBlob(partition, slot, blob, (progress) => {
+        onProgress("flash", partition, slot, progress);
     });
 }
 
-async function tryFlashImages(device, entries, onProgress, imageNames) {
+async function tryFlashImages(device, entries, onProgress, imageNames, slot = "current") {
     for (let imageName of imageNames) {
         let pattern = new RegExp(`${imageName}(?:-.+)?\\.img$`);
         let entry = entries.find((entry) => entry.filename.match(pattern));
         if (entry !== undefined) {
-            await flashEntryBlob(device, entry, onProgress, imageName);
+            await flashEntryBlob(device, entry, onProgress, imageName, slot);
         }
     }
 }
@@ -3504,22 +3504,43 @@ class FastbootDevice {
     }
 
     /**
-     * Flash the given Blob to the given partition on the device. Any image
+     * Flash the given Blob to the given partition and slot on the device. Any image
      * format supported by the bootloader is allowed, e.g. sparse or raw images.
      * Large raw images will be converted to sparse images automatically, and
      * large sparse images will be split and flashed in multiple passes
      * depending on the bootloader's payload size limit.
      *
      * @param {string} partition - The name of the partition to flash.
+     * @param {string} slot - The slot to flash, defaults to current
      * @param {Blob} blob - The Blob to retrieve data from.
      * @param {ProgressCallback} onProgress - Callback for flashing progress updates.
      * @throws {FastbootError}
      */
-    async flashBlob(partition, blob, onProgress = () => {}) {
-        // Use current slot if partition is A/B
+    async flashBlob(partition, slot = "current", blob, onProgress = () => {}) {
+        // Check slot if partition is A/B
         if ((await this.getVariable(`has-slot:${partition}`)) === "yes") {
-            partition += "_" + (await this.getVariable("current-slot"));
+            currentSlot = await this.getVariable("current-slot");
+            if (slot === "current") {
+                // Default behavior, flash current slot
+                partition += "_" + currentSlot;
+            } else if (slot === "other") {
+                // Allow flashing other slot
+                if (currentSlot === "a") {
+                    partition += "_b";
+                } else if (currentSlot === "b") {
+                    partition += "_a";
+                } else {
+                    throw new FastbootError(
+                        "FAIL",
+                        `Unable to determine other slot for partition ${partition}`
+                    );
+                }
+            } else {
+                // Allow flashing a particular slot directly
+                partition += "_" + slot;
+            }
         }
+        logDebug(`Flashing partition ${partition}`);
 
         let maxDlSize = await this._getDownloadSize();
         let fileHeader = await readBlobAsBuffer(

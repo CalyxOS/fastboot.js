@@ -446,7 +446,7 @@ fastboot protocol.
         
         <span class="code-name">
             
-                flashBlob<span class="signature">(partition, blob, onProgress)</span><span class="type-signature"></span>
+                flashBlob<span class="signature">(partition, slot, blob, onProgress)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -455,7 +455,7 @@ fastboot protocol.
     
     
     <div class="description">
-        Flash the given Blob to the given partition on the device. Any image
+        Flash the given Blob to the given partition and slot on the device. Any image
 format supported by the bootloader is allowed, e.g. sparse or raw images.
 Large raw images will be converted to sparse images automatically, and
 large sparse images will be split and flashed in multiple passes
@@ -486,6 +486,8 @@ depending on the bootloader's payload size limit.
             
 
             
+            <th>Default</th>
+            
 
             <th class="last">Description</th>
         </tr>
@@ -512,8 +514,43 @@ depending on the bootloader's payload size limit.
   
 
   
+      <td class="default">
+      
+      </td>
+  
 
   <td class="description last">The name of the partition to flash.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>slot</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+      <td class="default">
+      
+          current
+      
+      </td>
+  
+
+  <td class="description last">The slot to flash, defaults to current</td>
 </tr>
 
 
@@ -536,6 +573,10 @@ depending on the bootloader's payload size limit.
 
   
 
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The Blob to retrieve data from.</td>
@@ -561,6 +602,10 @@ depending on the bootloader's payload size limit.
 
   
 
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">Callback for flashing progress updates.</td>
@@ -611,7 +656,7 @@ depending on the bootloader's payload size limit.
         <p class="tag-source">
             <a href="fastboot.js.html" class="button">View Source</a>
             <span>
-                <a href="fastboot.js.html">fastboot.js</a>, <a href="fastboot.js.html#line481">line 481</a>
+                <a href="fastboot.js.html">fastboot.js</a>, <a href="fastboot.js.html#line482">line 482</a>
             </span>
         </p>
     
@@ -888,7 +933,7 @@ Equivalent to `fastboot update name.zip`.
         <p class="tag-source">
             <a href="fastboot.js.html" class="button">View Source</a>
             <span>
-                <a href="fastboot.js.html">fastboot.js</a>, <a href="fastboot.js.html#line572">line 572</a>
+                <a href="fastboot.js.html">fastboot.js</a>, <a href="fastboot.js.html#line593">line 593</a>
             </span>
         </p>
     
