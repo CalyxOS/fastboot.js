@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b696c7f3_53079923",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-03T16:40:15Z",
+      "side": 1,
+      "message": "Worked for bluejay",
+      "revId": "6cc9f36fce76827fed8ac2926ada2efbb2768c03",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
