@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32e4d3e2_fd0b0507",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-03T15:16:11Z",
+      "side": 1,
+      "message": "Uh, I only wanted to remove them from the patchset...",
+      "revId": "d46fc73a7ea3fac4facac34c1d2fa7a42b4db460",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
