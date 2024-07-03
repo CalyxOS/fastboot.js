@@ -265,6 +265,8 @@ export async function flashZip(
     if (entry !== undefined) {
         await device.runCommand("erase:avb_custom_key");
         await flashEntryBlob(device, entry, onProgress, "avb_custom_key");
+    } else {
+        throw new Error("avb_custom_key.img not found! cannot proceed!");
     }
 
     // 4. Check requirements
