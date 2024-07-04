@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90862037_5947dc2a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-04T12:05:52Z",
+      "side": 1,
+      "message": "This sounds good. But when would there be an official factory image without an AVB key?",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fc186dc_35798e64",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-04T12:05:52Z",
+      "side": 1,
+      "message": "Yeah! By step 3 we\u0027d have already flashed the bootloader though.",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82f51a46_947883a4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-04T12:05:52Z",
+      "side": 1,
+      "message": "I don\u0027t see them, but it\u0027d be good to have",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd92fde9_874e167d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-04T12:05:52Z",
+      "side": 1,
+      "message": "Wrong issue? Given we don\u0027t have such a check in `flash-all.sh`.",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d4ddab9_fa21e775",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-04T12:05:52Z",
+      "side": 1,
+      "message": "All for this, but only after we\u0027ve got parity with flash-all.sh first IMO.\n\nIt\u0027d be better to try and keep the two in sync as much as possible.",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
