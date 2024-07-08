@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19bee1ca_56d46b88",
+        "filename": "src/factory.ts",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T14:34:45Z",
+      "side": 1,
+      "message": "Tried this with a nonexistent filename to confirm behavior. Installation is cancelled right away with the error shown.\n\nThen tried with it as shown, and it worked.",
+      "revId": "9e18a155a2af751a69359702e53d033a5ace3ae8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
