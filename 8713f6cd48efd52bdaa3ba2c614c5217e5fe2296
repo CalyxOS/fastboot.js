@@ -16,6 +16,24 @@
       "message": "Probably not supposed to have the yarn.lock\n\nAnd also not sure if we want this.\n\nUsing it for testing.",
       "revId": "8713f6cd48efd52bdaa3ba2c614c5217e5fe2296",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b559b131_753655e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T14:07:46Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "64eba687_8df8392e",
+      "revId": "8713f6cd48efd52bdaa3ba2c614c5217e5fe2296",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

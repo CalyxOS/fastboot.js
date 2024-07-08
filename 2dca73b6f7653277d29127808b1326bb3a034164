@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0e602168_6f782e80",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T14:07:46Z",
+      "side": 1,
+      "message": "True... and also extracted images and done other unnecessary things.\n\nCould move the check to the top, but do the actual flashing at the same spot.",
+      "parentUuid": "3fc186dc_35798e64",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "82f51a46_947883a4",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -48,6 +66,24 @@
       "writtenOn": "2024-07-04T12:05:52Z",
       "side": 1,
       "message": "I don\u0027t see them, but it\u0027d be good to have",
+      "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6c4b6f9_4e09a1ce",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-07-08T14:07:46Z",
+      "side": 1,
+      "message": "I [removed them](https://review.calyxos.org/c/CalyxOS/fastboot.js/+/27591/comment/2a83bf48_b9f70032/) and forgot to update commit message.",
+      "parentUuid": "82f51a46_947883a4",
       "revId": "2dca73b6f7653277d29127808b1326bb3a034164",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
