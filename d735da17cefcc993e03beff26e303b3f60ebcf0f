@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3f3dc78_8394bb31",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-13T16:20:31Z",
+      "side": 1,
+      "message": "```\nCommand: --set_active\u003dother reboot-bootloader\nandroid-fastboot.js?v\u003d59a5a1c6:2963\nResponse: FAIL Invalid command --set_active\u003dother reboot-bootloader\n```",
+      "revId": "d735da17cefcc993e03beff26e303b3f60ebcf0f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
