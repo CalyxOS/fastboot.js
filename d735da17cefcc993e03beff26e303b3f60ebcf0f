@@ -16,6 +16,24 @@
       "message": "```\nCommand: --set_active\u003dother reboot-bootloader\nandroid-fastboot.js?v\u003d59a5a1c6:2963\nResponse: FAIL Invalid command --set_active\u003dother reboot-bootloader\n```",
       "revId": "d735da17cefcc993e03beff26e303b3f60ebcf0f",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97d585e5_0917e087",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-07-16T16:57:38Z",
+      "side": 1,
+      "message": "https://gitlab.com/CalyxOS/platform_system_core/-/blob/android14/fastboot/fastboot_driver.cpp?ref_type\u003dheads#L127",
+      "parentUuid": "d3f3dc78_8394bb31",
+      "revId": "d735da17cefcc993e03beff26e303b3f60ebcf0f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
