@@ -29,11 +29,16 @@ Detailed progress callbacks are also provided for many flashing steps.
 This library is available as a [package](https://www.npmjs.com/package/android-fastboot) on npm, so you can easily add it to your project:
 
 ```bash
-# Using npm
+# github.com/kdrag0n/fastboot.js
 npm install --save android-fastboot
+# review.calyxos.org/CalyxOS/fastboot.js
+npm install git+https://review.calyxos.org/CalyxOS/fastboot.js
+```
 
-# Using yarn
-yarn add android-fastboot
+Build package with esbuild
+
+```bash
+npm run build
 ```
 
 ## Examples
